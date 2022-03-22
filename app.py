@@ -7,9 +7,9 @@ app = Flask(__name__)
 app.secret_key = "VerySecretSecretKey"
 
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:root@localhost/classicmodels"
+app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:root@localhost/mydataorginizer"
 
-#db.init_app(app)
+db.init_app(app)
 
 #hier blueprint registrieren
 app.register_blueprint(index_blueprint)

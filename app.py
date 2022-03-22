@@ -11,7 +11,6 @@ app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:root@localhost/mydataorgin
 
 db.init_app(app)
 
-#hier blueprint registrieren
 app.register_blueprint(index_blueprint)
 
 app.run(debug=True)

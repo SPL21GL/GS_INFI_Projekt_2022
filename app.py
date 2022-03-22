@@ -1,5 +1,5 @@
 from flask import Flask
-#from model.models import db
+from model.models import db
 from flask.templating import render_template
 from controllers.index import index_blueprint
 import sqlalchemy

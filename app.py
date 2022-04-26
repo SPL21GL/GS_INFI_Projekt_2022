@@ -10,7 +10,7 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 app.config["SQLALCHEMY_DATABASE_URI"] = "mysql://root:root@localhost/mydataorginizer"
 
 db.init_app(app)
-
+print(234)
 app.register_blueprint(index_blueprint)
 
 app.run(debug=True)

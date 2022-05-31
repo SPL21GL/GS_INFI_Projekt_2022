@@ -20,7 +20,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">😃</a>
+      <a class="navbar-brand" href="#">⋐{My Data Orginizer}⋑ </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
         aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -28,40 +28,59 @@
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/">🏠 Home</a>
           </li>
 
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="/products" id="navbarDropdownMenuLink" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
-              🚗 Products
+              💾 Programme
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="/products">Anzeigen</a></li>
-              <li><a class="dropdown-item" href="/products/add">Hinzufügen</a></li>
+              <li><a class="dropdown-item" href="/products">show Programms</a></li>
+              <li><a class="dropdown-item" href="/products/add">add Programm</a></li>
             </ul>
           </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="/orders">📦 Orders</a>
+         
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="/products" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              🕹️ Server
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="/products">show Server</a></li>
+              <li><a class="dropdown-item" href="/products/add">change Server</a></li>
+            </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/customers">👨‍💼 Customers</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/payments">💶 Payments</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/employees">🧑‍🤝‍🧑 Employees</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/offices">🏘️ Offices</a>
+            <a class="nav-link" href="/employees">🧑‍🤝‍🧑 IT-Operators</a>
           </li>
         </div>
       </div>
     </div>
   </nav>
 
+  <div id="slides" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+      <li data-target="#slides" data-slide-to="0" class="active"></li>
+      <li data-target="#slides" data-slide-to="1"></li>
+      <li data-target="#slides" data-slide-to="2"></li>
+    </ul>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="static/Programms.jpg" class="img-fluid" alt="Responsive image">
+      <div class="carousel-caption">
+        <button type="button" class="btn btn-outline-light btn-lg">VIEW DEMO</button>
+      </div>
+    </div>    
+    <div class="carousel-item active">
+      <img src="static/server_background.jpg" class="img-fluid" alt="Responsive image"> 
+    </div>      
+    <div class="carousel-item active">
+      <img src="static/it_operators.jpg" class="img-fluid" alt="Responsive image">      
+    </div>
+  </div> 
 
   {% with messages = get_flashed_messages() %}
   {% if messages %}

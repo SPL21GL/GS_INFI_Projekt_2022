@@ -1,0 +1,44 @@
+{%extends 'base.html'%}
+
+{%block body%}
+
+
+
+<h2>All Programms</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Developer</th>
+      <th scope="col">last Update</th>
+      <th scope="col">publication Date</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+    {% for product in products %}
+    <tr>
+      <td>{{Programme.ProgrammeID}}</td>
+      <td>{{Peogramme.ProgrammeName}}</td>
+      <td>{{Peogramme.ProgrammeDeveloper}}</td>
+      <td>{{Peogramme.ProgrammelastUpdate}}</td>
+      <td>{{Peogramme.ProgrammepublicationDate}}</td>
+      <td>
+        <a class="btn btn-outline-secondary" href="/programms/edit?ProgrammeID={{Programme.ProgrammeID}}">✏️</a>
+        <form action="/programms/delete" method="post" style="display: inline;">
+          <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+          <input type="hidden" name="productCode" id="ProgrammeID" value="{{Programme.ProgrammeID}}">
+          <a class="btn btn-outline-secondary" href="#" onclick="deleteProgramme(this); return false;">🗑️</a>
+        </form>
+      </td>
+    </tr>
+    {% endfor %}
+
+
+  </tbody>
+</table>
+
+{%endblock%}
